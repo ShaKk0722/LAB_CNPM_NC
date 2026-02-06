@@ -18,6 +18,12 @@
 <body>
   <h1>Danh Sách Sinh Viên (SSR)</h1>
 
+  <div style="margin-bottom: 12px;">
+    <a href="/students/new">
+      <button type="button">Thêm Mới</button>
+    </a>
+  </div>
+
   <form class="toolbar" action="/students" method="GET">
     <input type="text" name="keyword" placeholder="Nhập tên..." th:value="${keyword}" />
     <button type="submit">Tìm</button>
@@ -35,14 +41,20 @@
         <th>Họ và Tên</th>
         <th>Email</th>
         <th>Tuổi</th>
+        <th>Thao tác</th>
       </tr>
     </thead>
     <tbody>
       <tr th:each="student : ${dsSinhVien}" th:classappend="${student.age < 18} ? 'text-danger' : ''">
         <td th:text="${student.id}">ID Mẫu</td>
-        <td th:text="${student.name}">Tên Mẫu</td>
+        <td>
+          <a th:href="@{'/students/' + ${student.id}}" th:text="${student.name}">Tên Mẫu</a>
+        </td>
         <td th:text="${student.email}">Email Mẫu</td>
         <td th:text="${student.age}">0</td>
+        <td>
+          <a th:href="@{'/students/' + ${student.id}}">Xem Chi Tiết</a>
+        </td>
       </tr>
       <tr th:if="${dsSinhVien == null || dsSinhVien.isEmpty()}">
         <td colspan="4" class="muted">Không có dữ liệu.</td>
