@@ -101,4 +101,22 @@ Khi `name = null` sẽ gây ra **NullPointerException**, làm chương trình b�
 
 ---
 
-# Lab 1 – Xây Dựng Backend REST API
+# Lab 2 – Xây Dựng Backend REST API
+
+---
+
+# Lab 3 – Xây Dựng Frontend (Server-Side Rendering)
+
+---
+
+# Lab 4 – Hoàn Thiện Sản Phẩm (Final Product)
+
+---
+
+# Lab 5 –  Docker & Deployment
+## Link Deploy: https://student-management-api-bv8j.onrender.com
+
+
+
+
+
